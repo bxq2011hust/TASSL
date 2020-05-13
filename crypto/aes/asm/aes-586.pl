@@ -188,7 +188,7 @@
 # window, which is actually *less* than RDTSC latency on Intel P4!
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"aes-586.pl",$x86only = $ARGV[$#ARGV] eq "386");

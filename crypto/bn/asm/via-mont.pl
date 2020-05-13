@@ -78,7 +78,7 @@
 #   as modern out-of-order 32-bit cores [again, for longer keys].
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"via-mont.pl");

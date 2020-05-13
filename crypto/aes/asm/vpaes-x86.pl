@@ -48,7 +48,7 @@
 #						<appro@openssl.org>
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"vpaes-x86.pl",$x86only = $ARGV[$#ARGV] eq "386");

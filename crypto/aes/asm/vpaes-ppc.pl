@@ -49,8 +49,8 @@ $sp="r1";
 $FRAME=6*$SIZE_T+13*16;	# 13*16 is for v20-v31 offload
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-( $xlate="${dir}ppc-xlate.pl" and -f $xlate ) or
-( $xlate="${dir}../../perlasm/ppc-xlate.pl" and -f $xlate) or
+( $xlate="${dir}/ppc-xlate.pl" and -f $xlate ) or
+( $xlate="${dir}/../../perlasm/ppc-xlate.pl" and -f $xlate) or
 die "can't locate ppc-xlate.pl";
 
 open STDOUT,"| $^X $xlate $flavour ".shift || die "can't call $xlate: $!";

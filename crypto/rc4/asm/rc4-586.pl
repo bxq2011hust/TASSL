@@ -57,7 +57,7 @@
 #	coefficients are for the largest block size.
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"rc4-586.pl",$x86only = $ARGV[$#ARGV] eq "386");

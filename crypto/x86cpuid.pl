@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC, "${dir}perlasm", "perlasm");
+push(@INC, "${dir}/perlasm", "perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"x86cpuid");

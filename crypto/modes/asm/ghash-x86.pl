@@ -126,7 +126,7 @@
 # Westmere, 1.95 - on Sandy/Ivy Bridge, 1.76 - on Bulldozer.
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"ghash-x86.pl",$x86only = $ARGV[$#ARGV] eq "386");

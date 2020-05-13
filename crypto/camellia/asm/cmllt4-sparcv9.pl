@@ -43,7 +43,7 @@
 # one byte in 38 cycles with 128-bit key on same processor.
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "sparcv9_modes.pl";
 
 &asm_init(@ARGV);

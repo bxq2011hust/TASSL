@@ -24,7 +24,7 @@
 #				are better[?];
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "sparcv9_modes.pl";
 
 &asm_init(@ARGV);

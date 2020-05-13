@@ -110,7 +110,7 @@
 # (**)	As per above comment, the result is for AVX *plus* sh[rl]d.
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-push(@INC,"${dir}","${dir}../../perlasm");
+push(@INC,"${dir}","${dir}/../../perlasm");
 require "x86asm.pl";
 
 &asm_init($ARGV[0],"sha1-586.pl",$ARGV[$#ARGV] eq "386");

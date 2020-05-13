@@ -97,8 +97,8 @@ if ($flavour =~ /32/) {
 $LITTLE_ENDIAN = ($flavour=~/le$/) ? 4 : 0;
 
 $0 =~ m/(.*[\/\\])[^\/\\]+$/; $dir=$1;
-( $xlate="${dir}ppc-xlate.pl" and -f $xlate ) or
-( $xlate="${dir}../../perlasm/ppc-xlate.pl" and -f $xlate) or
+( $xlate="${dir}/ppc-xlate.pl" and -f $xlate ) or
+( $xlate="${dir}/../../perlasm/ppc-xlate.pl" and -f $xlate) or
 die "can't locate ppc-xlate.pl";
 
 open STDOUT,"| $^X $xlate $flavour ".shift || die "can't call $xlate: $!";
